@@ -1,0 +1,7 @@
+https://dev.alpinelinux.org/archive/gummiboot/gummiboot-VERSION.tar.gz
+files/gummiboot.8
+patches/aarch64-support.patch patch
+patches/fix-glibc.patch patch
+patches/fix-waitforkey.patch patch
+patches/remove-conflicts.patch patch
+patches/stub.patch patch

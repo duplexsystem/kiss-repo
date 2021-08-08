@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+for patch in patch/*.patch; do
+    patch -p1 < "$patch"
+done
+
+./autogen.sh
+./configure
+
+make install
+
+cp files/gummiboot.8 /usr/share/man/man8/gummiboot.8
