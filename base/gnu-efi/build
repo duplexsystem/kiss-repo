@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-patch -p1 < fix-clang.patch
+patch -p1 < patches/fix-clang.patch
 
 sed -i 's/inc apps/inc/' Makefile
 
