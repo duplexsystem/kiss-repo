@@ -1,6 +1,8 @@
 https://dev.alpinelinux.org/archive/gummiboot/gummiboot-VERSION.tar.gz
 files/gummiboot.8
 patches/aarch64-support.patch patch
+patches/assume-usr-lib-to-fix-clang-support.patch patch
+patches/fix-musl.patch patch
 patches/fix-glibc.patch patch
 patches/fix-waitforkey.patch patch
 patches/remove-conflicts.patch patch

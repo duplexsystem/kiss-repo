@@ -1,0 +1,25 @@
+From 8b3cdffc8148dbb9b247461333c4f53f7de4b825 Mon Sep 17 00:00:00 2001
+From: Zoe <duplexsys@protonmail.com>
+Date: Sun, 8 Aug 2021 18:58:53 -0500
+Subject: assume /usr/lib to fix clang support
+
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 27bbe1d..d19fb16 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -80,7 +80,7 @@ dnl efibind.h as the chances of efi.h not existing if it does are very low.
+ AC_CHECK_HEADER(efi/${ARCH}/efibind.h, [],
+         [AC_MSG_ERROR([*** GNU EFI header efibind.h not found])])
+ 
+-efiroot=$(echo $(cd /usr/lib/$(gcc -print-multi-os-directory); pwd))
++efiroot="/usr/lib"
+ EFI_LIB_DIR="$efiroot"
+ AC_ARG_WITH(efi-libdir,
+         AS_HELP_STRING([--with-efi-libdir=PATH], [Path to efi lib directory]),
+-- 
+2.32.0
+

@@ -1,0 +1,25 @@
+diff --git a/Makefile.am b/Makefile.am
+index 6568a35..fdd749a 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -143,7 +143,7 @@ $(top_builddir)/src/efi/%.o: $(top_srcdir)/src/efi/%.c $(addprefix $(top_srcdir)
+ 
+ $(gummiboot_solib): $(gummiboot_objects)
+ 	$(AM_V_CCLD)$(LD) $(efi_ldflags) $(gummiboot_objects) \
+-		-o $@ -lefi -lgnuefi $(shell $(CC) -print-libgcc-file-name); \
++		-o $@ -lefi -lgnuefi $(shell $(CC) -print-file-name=libc.a) $(shell $(CC) -print-libgcc-file-name); \
+ 	nm -D -u $@ | grep ' U ' && exit 1 || :
+ .DELETE_ON_ERROR: $(gummboot_solib)
+ 
+@@ -178,7 +178,7 @@ $(top_builddir)/src/efi/%.o: $(top_srcdir)/src/efi/%.c $(addprefix $(top_srcdir)
+ 
+ $(stub_solib): $(stub_objects)
+ 	$(AM_V_CCLD)$(LD) $(efi_ldflags) $(stub_objects) \
+-		-o $@ -lefi -lgnuefi $(shell $(CC) -print-libgcc-file-name); \
++		-o $@ -lefi -lgnuefi $(shell $(CC) -print-file-name=libc.a) $(shell $(CC) -print-libgcc-file-name); \
+ 	nm -D -u $@ | grep ' U ' && exit 1 || :
+ .DELETE_ON_ERROR: $(gummboot_solib)
+ 
+-- 
+2.32.0
+
