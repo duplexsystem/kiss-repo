@@ -1,4 +1,6 @@
 https://dev.alpinelinux.org/archive/gummiboot/gummiboot-VERSION.tar.gz
+https://ftp.gnu.org/gnu/autoconf/autoconf-2.13.tar.gz autoconf2.13/
+https://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz m4-1.4.18/
 files/gummiboot.8
 patches/aarch64-support.patch patch
 patches/assume-usr-lib-to-fix-clang-support.patch patch

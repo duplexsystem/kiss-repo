@@ -4,6 +4,31 @@ for patch in patch/*.patch; do
     patch -p1 < "$patch"
 done
 
+# Autoconf 2.13 requires GNU m4.
+(
+    cd m4-1.4.18
+
+    ./configure \
+        --prefix="$PWD/../junk"
+
+    make
+    make DESTDIR="" install
+)
+
+export PATH="$PWD/junk/bin:$PATH"
+
+# Build autoconf 2.13 for gummiboot
+(
+    cd autoconf2.13
+
+    ./configure \
+        --prefix="$PWD/../junk" \
+        --program-suffix=-2.13
+
+    make
+    make DESTDIR="" install
+)
+
 ./autogen.sh
 ./configure
 

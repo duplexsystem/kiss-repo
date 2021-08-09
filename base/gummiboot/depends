@@ -1,5 +1,3 @@
-autoconf make
-automake make
 gnu-efi make
 util-linux make
 xz make
