@@ -1,8 +1,6 @@
 #!/bin/sh -e
 
-for patch in patches/*.patch; do
-    patch -p1 < "$patch"
-done
+patch -p1 < fix-clang.patch
 
 sed -i 's/inc apps/inc/' Makefile
 
