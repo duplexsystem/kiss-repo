@@ -9,4 +9,4 @@ done
 
 make install
 
-cp files/gummiboot.8 /usr/share/man/man8/gummiboot.8
+cp gummiboot.8 /usr/share/man/man8/gummiboot.8
