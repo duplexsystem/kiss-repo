@@ -5,7 +5,7 @@ for patch in *.patch; do
 done
 
 ./autogen.sh
-./configure
+./configure --prefix=/usr
 
 make install
 

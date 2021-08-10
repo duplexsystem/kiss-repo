@@ -1,5 +1,6 @@
 autoconf make
 automake make
 gnu-efi make
+pkgconf make
 util-linux make
 xz make
