@@ -9,6 +9,6 @@ done
 
 make install
 
-mkdir -p "$1/man/man8/"
+mkdir -p "$1/usr/share/man/man8/"
 
-cp gummiboot.8 "$1/man/man8/gummiboot.8"
+cp gummiboot.8 "$1/usr/share/man/man8/gummiboot.8"
