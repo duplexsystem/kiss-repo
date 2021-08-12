@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
+
+mkdir -p bld/release && cd bld/release
+
+meson \
+    --prefix=/usr \
+    --buildtype=release \
+    -Dbackend-x11=disabled \
+    ../.. output
+
+ninja -C output
+ninja -C output install

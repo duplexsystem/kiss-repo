@@ -1,0 +1,11 @@
+alsa-lib
+fcft
+json-c
+libmpdclient
+libyaml
+meson make
+pixman
+samurai make
+scdoc make
+tllist
+wayland-protocols
