@@ -2,10 +2,12 @@ alsa-lib
 fcft
 json-c
 libmpdclient
+libudev-zero
 libyaml
 meson make
 pixman
 samurai make
 scdoc make
 tllist
+wayland
 wayland-protocols

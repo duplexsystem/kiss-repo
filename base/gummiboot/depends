@@ -2,5 +2,5 @@ autoconf make
 automake make
 gnu-efi make
 pkgconf make
-util-linux make
+util-linux
 xz make
