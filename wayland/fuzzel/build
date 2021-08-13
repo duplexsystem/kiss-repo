@@ -2,6 +2,6 @@
 
 mkdir -p bld/release && cd bld/release
 
-meson --prefix=/usr --buildtype=release --buildtype=release -Denable-cairo=disabled -Denable-png=enabled -Denable-svg=disabled ./output
+meson --prefix=/usr --buildtype=release --buildtype=release -Denable-cairo=disabled -Denable-png=enabled -Denable-svg=disabled ../.. output
 
 ninja -C output install
