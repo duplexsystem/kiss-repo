@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+mkdir -p bld/release && cd bld/release
+
+meson --buildtype=release -Denable-cairo=disabled -Denable-png=enabled -Denable-svg=disabled
+
+ninja install

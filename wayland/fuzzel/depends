@@ -1,0 +1,8 @@
+fcft
+libpng
+meson make
+ninja make
+pixman
+scodc make
+wayland
+xkbcommon
