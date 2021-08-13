@@ -4,4 +4,4 @@ meson make
 pixman
 scdoc make
 wayland
-xkbcommon
+libxkbcommon
