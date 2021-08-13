@@ -1,8 +1,7 @@
 fcft
 libpng
 meson make
-ninja make
 pixman
-scodc make
+scdoc make
 wayland
 xkbcommon
