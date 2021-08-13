@@ -2,7 +2,7 @@
 
 export NOTO_PATH=$1/usr/share/fonts/noto/
 
-mkdir -P $NOTO_PATH
+mkdir -p $NOTO_PATH
 
 cp ./hinted/Noto*/*-Bold.ttf $NOTO_PATH
 chmod 644 $NOTO_PATH/Noto*/*-Bold.ttf
