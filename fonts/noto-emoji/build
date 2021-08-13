@@ -2,18 +2,10 @@
 
 export NOTO_PATH=$1/usr/share/fonts/noto/
 
-mkdir -p $NOTO_PATH
+mkdir -P $NOTO_PATH
 
-cp ./hinted/Noto*/*-Bold.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Bold.ttf
-cp ./hinted/Noto*/*-Italic.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Italic.ttf
-cp ./hinted/Noto*/*-Regular.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Regular.ttf
+cp ./fonts/NotoColorEmoji.ttf $NOTO_PATH
+chmod 644 $NOTO_PATH/NotoColorEmoji.ttf
 
-cp ./unhinted/Noto*/*-Bold.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Bold.ttf
-cp ./unhinted/Noto*/*-Italic.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Italic.ttf
-cp ./unhinted/Noto*/*-Regular.ttf $NOTO_PATH
-chmod 644 $NOTO_PATH/Noto*/*-Regular.ttf
+cp ./fonts/NotoEmoji-Regular.ttf $NOTO_PATH
+chmod 644 $NOTO_PATH/NotoEmoji-Regular.ttf
