@@ -5,4 +5,4 @@ export TTF_PATH=$1/usr/share/fonts/TTF
 mkdir -p $TTF_PATH
 
 cp ./fonts/ttf/JetBrainsMono*.ttf $TTF_PATH
-chmod 644 $TTF_PATH/JetBrainsMono*.ttf
+find  $TTF_PATH -name "JetBrainsMono*.ttf" | xargs -n 3 chmod 644
