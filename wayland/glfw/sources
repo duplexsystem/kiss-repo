@@ -1,1 +1,5 @@
 https://github.com/glfw/glfw/archive/VERSION.tar.gz
+patches/0001-libdecoration-support.patch
+patches/0002-set-O_NONBLOCK-on-repeat-timerfd.patch
+patches/0003-wayland-don-t-crash-app-on-api-calls-to-window-focus.patch
+patches/0004-fix-broken-opengl-screenshots-on-mutter.patch
