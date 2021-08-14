@@ -1,0 +1,5 @@
+cairo
+meson make
+pango
+wayland
+wayland-protocols
