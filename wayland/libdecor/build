@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
-meson build --buildtype release -Ddbus=disabled
+meson build --buildtype release -Ddbus=disabled -Ddemo=false
 meson install -C build
