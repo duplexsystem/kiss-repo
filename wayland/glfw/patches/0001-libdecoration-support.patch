@@ -107,33 +107,6 @@ index 59ab473c9e..fb9fab99ab 100644
  # Set compiler specific flags
  #--------------------------------------------------------------------
 
-From 7bcb0e0d354d2e82671c1f3a32d261f8e50ed87d Mon Sep 17 00:00:00 2001
-From: Christian Rauch <Rauch.Christian@gmx.de>
-Date: Fri, 16 Jul 2021 23:40:45 +0100
-Subject: [PATCH 5/8] CI: install libdecor from upstream
-
----
- .github/workflows/build.yml | 6 ++++++
- 1 file changed, 6 insertions(+)
-
-diff --git a/.github/workflows/build.yml b/.github/workflows/build.yml
-index d87ae8d1d6..71d5976e58 100644
---- a/.github/workflows/build.yml
-+++ b/.github/workflows/build.yml
-@@ -43,6 +43,12 @@ jobs:
-               run: |
-                   sudo apt update
-                   sudo apt install wayland-protocols libwayland-dev libxkbcommon-dev
-+                  sudo apt install meson
-+                  git clone --depth 1 https://gitlab.gnome.org/jadahl/libdecor.git --branch 0.1.0
-+                  cd libdecor
-+                  meson build --buildtype release -Ddemo=false -Ddbus=disabled
-+                  ninja -C build
-+                  sudo meson install -C build
- 
-             - name: Configure static library
-               run: cmake -S . -B build-static -D GLFW_USE_WAYLAND=ON
-
 From ae0bde5733c481c8097f903b020c4ac0bfdedf96 Mon Sep 17 00:00:00 2001
 From: Christian Rauch <Rauch.Christian@gmx.de>
 Date: Sun, 9 Feb 2020 14:01:58 +0000
