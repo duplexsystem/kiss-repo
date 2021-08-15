@@ -1,4 +1,4 @@
-From 169d911ab575c7efab203e91db03c325b20d14e4 Mon Sep 17 00:00:00 2001
+From 082e2a7d2738f559dbfce090c6983c5e7fbff1b1 Mon Sep 17 00:00:00 2001
 From: Stone Tickle <lattis@mochiro.moe>
 Date: Fri, 5 Jun 2020 12:51:25 +0900
 Subject: [PATCH 2/4] set O_NONBLOCK on repeat timerfd
@@ -8,10 +8,10 @@ Subject: [PATCH 2/4] set O_NONBLOCK on repeat timerfd
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/src/wl_init.c b/src/wl_init.c
-index b6cdb39d..f092aef4 100644
+index 7d9f8221..6616c703 100644
 --- a/src/wl_init.c
 +++ b/src/wl_init.c
-@@ -1198,8 +1198,9 @@ int _glfwPlatformInit(void)
+@@ -1214,8 +1214,9 @@ int _glfwPlatformInit(void)
      _glfwInitTimerPOSIX();
  
      _glfw.wl.timerfd = -1;
@@ -21,8 +21,8 @@ index b6cdb39d..f092aef4 100644
 +        _glfw.wl.timerfd = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC | TFD_NONBLOCK);
 +    }
  
- #ifndef WITH_DECORATION
-     if (!_glfw.wl.wmBase)
+     if (_glfw.wl.pointer && _glfw.wl.shm)
+     {
 -- 
 2.32.0
 
